@@ -13,7 +13,7 @@
        "autoUpgradeMinorVersion":true,
        "settings": {
            "fileUris": [
-           "http://Yourstorageaccount.blob.core.windows.net/customscriptfiles/sccmclientinstall.ps1",
+           "https://saavdeusfslogix.file.core.windows.net/eusavdprofiles/sccmclientinstall.ps1",
            
        ],
        "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File sccmclientinstall.ps1"
