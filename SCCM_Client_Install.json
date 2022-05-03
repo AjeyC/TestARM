@@ -1,0 +1,22 @@
+{
+   "type": "Microsoft.Compute/virtualMachines/extensions",
+   "name": "MyCustomScriptExtension",
+   "apiVersion": "2018-06-01",
+   "location": "[parameters('location')]",
+   "dependsOn": [
+       "[concat('Microsoft.Compute/virtualMachines/',parameters('vmName'))]"
+   ],
+   "properties": {
+       "publisher": "Microsoft.Compute",
+       "type": "CustomScriptExtension",
+       "typeHandlerVersion": "1.10",
+       "autoUpgradeMinorVersion":true,
+       "settings": {
+           "fileUris": [
+           "http://Yourstorageaccount.blob.core.windows.net/customscriptfiles/sccmclientinstall.ps1",
+           
+       ],
+       "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File sccmclientinstall.ps1"
+     }
+   }
+ }
